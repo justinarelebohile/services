@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Change Application</title>
+    
+</head>
+<body>
+    <h1>Name Change Application</h1>
+    <form id="nameChangeApplicationForm" enctype="multipart/form-data">
+        <!-- Personal Information -->
+        <h2>Personal Information</h2>
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required><br>
+
+        <label for="dateOfBirth">Date of Birth:</label>
+        <input type="date" id="dateOfBirth" name="dateOfBirth" required><br>
+
+        <label for="currentName">Current Name:</label>
+        <input type="text" id="currentName" name="currentName" required><br>
+
+        <!-- New Name -->
+        <h2>New Name</h2>
+        <label for="newFirstName">New First Name:</label>
+        <input type="text" id="newFirstName" name="newFirstName" required><br>
+
+        <label for="newLastName">New Last Name:</label>
+        <input type="text" id="newLastName" name="newLastName" required><br>
+
+        <!-- Document Upload -->
+        <h2>Document Upload</h2>
+        <label for="nameChangeApplication">Upload Name Change Application:</label>
+        <input type="file" id="nameChangeApplication" name="nameChangeApplication" accept=".pdf, .jpg, .png" required><br>
+
+        <label for="proofOfIdentity">Upload Proof of Identity:</label>
+        <input type="file" id="proofOfIdentity" name="proofOfIdentity" accept=".pdf, .jpg, .png" required><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit Application">
+    </form>
+
+    <script>
+        // Handle form submission
+        document.getElementById("nameChangeApplicationForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // You can use JavaScript to handle the form submission,
+            // validate inputs, and send data to a server using AJAX or fetch.
+            // For this example, we'll simply display a success message.
+            alert("Name change application submitted successfully!");
+        });
+    </script>
+</body>
+</html>

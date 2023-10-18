@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marriage Certificate Application</title>
+</head>
+<body>
+    <h1>Marriage Certificate Application</h1>
+    <form id="marriageCertificateForm" enctype="multipart/form-data">
+        <!-- Bride's Information -->
+        <h2>Bride's Information</h2>
+        <label for="brideFullName">Full Name:</label>
+        <input type="text" id="brideFullName" name="brideFullName" required><br>
+
+        <label for="brideDateOfBirth">Date of Birth:</label>
+        <input type="date" id="brideDateOfBirth" name="brideDateOfBirth" required><br>
+
+        <!-- Groom's Information -->
+        <h2>Groom's Information</h2>
+        <label for="groomFullName">Full Name:</label>
+        <input type="text" id="groomFullName" name="groomFullName" required><br>
+
+        <label for="groomDateOfBirth">Date of Birth:</label>
+        <input type="date" id="groomDateOfBirth" name="groomDateOfBirth" required><br>
+
+        <!-- Document Upload -->
+        <h2>Document Upload</h2>
+        <label for="marriageCertificateCopy">Upload Marriage Certificate Copy:</label>
+        <input type="file" id="marriageCertificateCopy" name="marriageCertificateCopy" accept=".pdf, .jpg, .png" required><br>
+
+        <label for="identificationProof">Upload Identification Proof:</label>
+        <input type="file" id="identificationProof" name="identificationProof" accept=".pdf, .jpg, .png" required><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit Application">
+    </form>
+
+    <script>
+        // Handle form submission
+        document.getElementById("marriageCertificateForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // You can use JavaScript to handle the form submission,
+            // validate inputs, and send data to a server using AJAX or fetch.
+            // For this example, we'll simply display a success message.
+            alert("Marriage certificate application submitted successfully!");
+        });
+    </script>
+</body>
+</html>

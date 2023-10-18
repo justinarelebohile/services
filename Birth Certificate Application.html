@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birth Certificate Application</title>
+</head>
+<body>
+    <h1>Birth Certificate Application</h1>
+    <form id="birthCertificateForm" enctype="multipart/form-data">
+        <!-- Personal Information -->
+        <h2>Personal Information</h2>
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required><br>
+
+        <label for="dateOfBirth">Date of Birth:</label>
+        <input type="date" id="dateOfBirth" name="dateOfBirth" required><br>
+
+        <label for="placeOfBirth">Place of Birth:</label>
+        <input type="text" id="placeOfBirth" name="placeOfBirth" required><br>
+
+        <!-- Parent Information -->
+        <h2>Parent Information</h2>
+        <label for="fatherName">Father's Name:</label>
+        <input type="text" id="fatherName" name="fatherName" required><br>
+
+        <label for="motherName">Mother's Name:</label>
+        <input type="text" id="motherName" name="motherName" required><br>
+
+        <!-- Document Upload -->
+        <h2>Document Upload</h2>
+        <label for="birthCertificateCopy">Upload Birth Certificate Copy:</label>
+        <input type="file" id="birthCertificateCopy" name="birthCertificateCopy" accept=".pdf, .jpg, .png" required><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit Application">
+    </form>
+
+    <script>
+        // Handle form submission
+        document.getElementById("birthCertificateForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // You can use JavaScript to handle the form submission,
+            // validate inputs, and send data to a server using AJAX or fetch.
+            // For this example, we'll simply display a success message.
+            alert("Application submitted successfully!");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostille and Legalization Application</title>
+</head>
+<body>
+    <h1>Apostille and Legalization Application</h1>
+    <form id="apostilleApplicationForm" enctype="multipart/form-data">
+        <!-- Personal Information -->
+        <h2>Personal Information</h2>
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required><br>
+
+        <label for="dateOfBirth">Date of Birth:</label>
+        <input type="date" id="dateOfBirth" name="dateOfBirth" required><br>
+
+        <label for="currentNationality">Current Nationality:</label>
+        <input type="text" id="currentNationality" name="currentNationality" required><br>
+
+        <!-- Document Details -->
+        <h2>Document Details</h2>
+        <label for="documentType">Type of Document:</label>
+        <input type="text" id="documentType" name="documentType" required><br>
+
+        <label for="documentNumber">Document Number:</label>
+        <input type="text" id="documentNumber" name="documentNumber" required><br>
+
+        <!-- Document Upload -->
+        <h2>Document Upload</h2>
+        <label for="apostilleApplication">Upload Apostille Application:</label>
+        <input type="file" id="apostilleApplication" name="apostilleApplication" accept=".pdf, .jpg, .png" required><br>
+
+        <label for="documentCopy">Upload Document Copy:</label>
+        <input type="file" id="documentCopy" name="documentCopy" accept=".pdf, .jpg, .png" required><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit Application">
+    </form>
+
+    <script>
+        // Handle form submission
+        document.getElementById("apostilleApplicationForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // You can use JavaScript to handle the form submission,
+            // validate inputs, and send data to a server using AJAX or fetch.
+            // For this example, we'll simply display a success message.
+            alert("Apostille and legalization application submitted successfully!");
+        });
+    </script>
+</body>
+</html>

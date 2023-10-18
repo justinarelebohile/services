@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Application</title>
+</head>
+<body>
+    <h1>ID Application</h1>
+    <form id="idApplicationForm" enctype="multipart/form-data">
+        <!-- Personal Information -->
+        <h2>Personal Information</h2>
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required><br>
+
+        <label for="dateOfBirth">Date of Birth:</label>
+        <input type="date" id="dateOfBirth" name="dateOfBirth" required><br>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required><br>
+
+        <!-- Document Upload -->
+        <h2>Document Upload</h2>
+        <label for="idCopy">Upload ID Copy:</label>
+        <input type="file" id="idCopy" name="idCopy" accept=".pdf, .jpg, .png" required><br>
+
+        <label for="proofOfAddress">Upload Proof of Address:</label>
+        <input type="file" id="proofOfAddress" name="proofOfAddress" accept=".pdf, .jpg, .png" required><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit Application">
+    </form>
+
+    <script>
+        // Handle form submission
+        document.getElementById("idApplicationForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // You can use JavaScript to handle the form submission,
+            // validate inputs, and send data to a server using AJAX or fetch.
+            // For this example, we'll simply display a success message.
+            alert("ID application submitted successfully!");
+        });
+    </script>
+</body>
+</html>
